@@ -21,11 +21,13 @@
       <% end %>
       <br />
 
+    <div class="button">
       <div class="actions">
-        <%= f.submit "Sign In", :class => "btn btn-outline-primary" %>
+        <%= f.submit "SIGN IN", class: "button btn" %>
       </div>
+    </div>
+      
     <% end %>
-    <br />
 
-    <%= render "devise/shared/links", :class => "btn btn-outline-secondary" %>
+    <%= render "devise/shared/links" %>
 </div>

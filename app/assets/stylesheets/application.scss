@@ -1,6 +1,7 @@
 @import "bootstrap";
 
 body {
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 14px;
   color: #c9c9c9;
   background-color: #000000;
@@ -101,3 +102,86 @@ h1 span {
     transform: translate(0, -15%);
   }
 }
+
+/* FOOTER */
+
+.footer {
+  margin-top: 46%;
+}
+
+.footer a {
+  color: #acacac;
+}
+
+.footer a:hover {
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding-bottom: 10rem;
+  }
+}
+
+/* BUTTON */
+
+.button {
+  border: 1px white solid;
+    width: 120px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.button:before {
+    content: '';
+    background: linear-gradient(45deg, #585858, #d3d3d3, #8b8b8b, #ffffff, #a7a7a7, #6b6b6b, #5c5c5c, #f1f1f1, #686868);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.button:active {
+    color: white;
+}
+
+.button:active:after {
+    background: transparent;
+}
+
+.button:hover:before {
+    opacity: 1;
+}
+
+.button:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
