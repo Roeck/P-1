@@ -16,7 +16,9 @@
     <%= render 'shared/navbar' if current_user %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <div class="container">
+        <%= yield %>
+    </div>
     <%= render 'shared/footer' %>
   </body>
 </html>
