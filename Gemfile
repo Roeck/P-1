@@ -16,6 +16,10 @@ gem 'bootstrap', '~> 5.0', '>= 5.0.1'
 
 gem 'carrierwave', '~> 2.2', '>= 2.2.2'
 
+gem 'cloudinary', '~> 1.20'
+
+gem 'figaro'
+
 gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
