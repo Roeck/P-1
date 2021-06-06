@@ -1,0 +1,9 @@
+<div class="box">
+    <p class="username"><h3>Welcome, <%= @user.name %>!</h3></p>
+    <% if @user == current_user %>
+    <%= link_to "Edit Profile", edit_user_registration_path, class: "button btn" %>
+    <% end %>
+</div>
+
+    
+ 

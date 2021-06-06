@@ -40,11 +40,27 @@ body {
   margin-left: 50%;
 }
 
+/* BOX */
+
+.box { 
+    position: absolute;
+    margin-top: 12%;
+    text-align: center;
+    left: 50%;
+    width: 80%;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    box-shadow: 0 30px 50px #00000099;
+    border-radius: 10px;
+}
+
 /* SIGN BOXES */
 
 .sign-box {
   position: absolute;
-  margin-top: 26%;
+  margin-top: 8%;
   left: 50%;
   width: 400px;
   padding: 40px;
@@ -186,4 +202,9 @@ h1 span {
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
 }
+
+
+
+
+
 
