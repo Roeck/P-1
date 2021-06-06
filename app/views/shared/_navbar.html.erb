@@ -1,30 +1,14 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Photin</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %> 
-  </head>
-
-  <body>
-      <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid">
-           <a class="navbar-brand" href="#">HOME</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto">
-              <%= link_to "Sign In", new_user_session_path, class: "nav-link #{'active font-weight-bold' if current_page?(new_user_session_path)}" %>
-              <%= link_to "Sign Up", new_user_registration_path, class: "nav-link #{'active font-weight-bold' if current_page?(new_user_registration_path)}" %>
-            </ul>
-        </div>
-      </div>
-    </nav>
-  </body>
-</html>
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+        <a class="navbar-brand" href="#">HOME</a>
+        <%= link_to "Profile", user_path(current_user), class: "nav-link core-sprite profile-icon hide-text" %>
+        <input class="form-control me-2 common-btn" type="search" placeholder="Search" aria-label="Search", style="width: 25rem; margin-left: 28rem;">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+          <%= link_to "Sign In", new_user_session_path, class: "nav-link #{'active font-weight-bold' if current_page?(new_user_session_path)}" %>
+          <%= link_to "Sign Up", new_user_registration_path, class: "nav-link #{'active font-weight-bold' if current_page?(new_user_registration_path)}" %>
+          <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "nav-link" %> 
+        </ul>
+    </div>
+  </div>
+</nav>
