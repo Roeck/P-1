@@ -7,8 +7,10 @@
         <ul class="navbar-nav ms-auto">
           <%= link_to "Sign In", new_user_session_path, class: "nav-link #{'active font-weight-bold' if current_page?(new_user_session_path)}" %>
           <%= link_to "Sign Up", new_user_registration_path, class: "nav-link #{'active font-weight-bold' if current_page?(new_user_registration_path)}" %>
-          <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "nav-link" %> 
+          <%= link_to(destroy_user_session_path, {:class => "nav-link", :method => :delete}) do  %>
+          <span class="sidebar-normal"> Logout </span>
         </ul>
+        <% end %>       
     </div>
   </div>
 </nav>
