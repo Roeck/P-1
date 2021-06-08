@@ -20,6 +20,8 @@ gem 'cloudinary', '~> 1.20'
 
 gem 'figaro'
 
+gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.2'
+
 gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
