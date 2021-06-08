@@ -14,18 +14,18 @@ gem 'devise'
 
 gem 'bootstrap', '~> 5.0', '>= 5.0.1'
 
+# Image upload to AWS gems
 gem 'carrierwave', '~> 2.2', '>= 2.2.2'
+gem 'fog', '~> 1.38'
 
-gem 'cloudinary', '~> 1.20'
-
-gem 'figaro'
-
-gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.2'
+# Image resizing gem
+gem 'mini_magick', '~> 4.11'
 
 gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'figaro'
 end
 
 group :development do
